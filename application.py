@@ -1,9 +1,9 @@
-import pandas as pd
+
 import jinja2
 import os
 import cv2
 import glob
-import numpy as np
+
 from flask import Flask, request, render_template
 import tensorflow.keras as keras
 from artclassifier.artclassifier import art_style_classifier
