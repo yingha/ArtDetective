@@ -1,0 +1,7 @@
+flask
+pandas
+jinja2
+numpy
+tensorflow
+python-Levenshtein
+-e git+https://github.com/yingha/artclassifier.git#egg=artclassifier

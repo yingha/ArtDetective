@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+    {% block content %} 
+    <ul>
+        <h3>Feed Me Artworks</h3>
+        <p>then, you will know the art style</p>
+            
+        <form action="/artstyles" method = "post" enctype="multipart/form-data">
+    
+            <label for="img">Select a file:</label>
+            <input id="fileupload" type="file" name="file"/>
+            <input type="submit" value="Submit">
+        
+            <hr />
+            <b>your image</b>
+            <br />
+            <br />
+            <div id="dvPreview"></div> 
+        
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+            <script language="javascript" type="text/javascript">
+            $(function () {
+                $("#fileupload").change(function () {
+                    $("#dvPreview").html("");
+                    var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.jpg|.jpeg|.gif|.png|.bmp)$/;
+                    if (regex.test($(this).val().toLowerCase())) {
+                        if ($.browser.msie && parseFloat(jQuery.browser.version) <= 9.0) {
+                            $("#dvPreview").show();
+                            $("#dvPreview")[0].filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = $(this).val();
+                        }
+                        else {
+                            if (typeof (FileReader) != "undefined") {
+                                $("#dvPreview").show();
+                                $("#dvPreview").append("<img />");
+                                var reader = new FileReader();
+                                reader.onload = function (e) {
+                                    $("#dvPreview img").attr("src", e.target.result);
+                                }
+                                reader.readAsDataURL($(this)[0].files[0]);
+                            } else {
+                                alert("This browser does not support FileReader.");
+                            }
+                        }
+                    } else {
+                        alert("Please upload a valid image file.");
+                    }
+                });
+            });
+            </script>
+
+        </form> 
+
+
+    </ul>
+
+    {% endblock %}

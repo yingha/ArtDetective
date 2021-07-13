@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+    {% block content %} 
+    <ul>
+        <h3>Galerie</h3>
+        <br>
+        <p>Enjoy some water color paintings here!</p>
+
+            <div class="gallery2"></div>
+            {% for path in paths %}
+                <img class="item" src="{{ url_for('static',filename=path) }}" width="200">
+            {% endfor %}
+            </div>
+
+
+    </ul>
+
+    {% endblock %}

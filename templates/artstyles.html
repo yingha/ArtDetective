@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+    {% block content %} 
+    <ul>
+        <h3>Artstyles</h3>
+        <!-- <p>File uploaded successfully:<br> {{name[0]}}</p> -->
+        <br>
+        {% for name in name %}
+            <img src="{{ url_for('static',filename=name) }}" width="180" height="180" >
+        {% endfor %}
+        <br>
+        <p>this artwork belongs to:</p><br>
+
+        {% for style_img,style,pred in zip(style_imgs,prediction.columns,prediction.iloc[0]) %}
+            <div class="responsive">
+                <div class="gallery">
+                    <a target="_blank" href="{{ url_for('static',filename=style_img) }}">
+                        <img src="{{ url_for('static',filename=style_img) }}" width="600" height="400">
+                    </a>
+                    <div class="desc">
+                        {{style}}<br>
+                        {{pred}}<br>
+                        <a href="./{{style}}" style="color:darkgray">Map</a>
+                    </div>
+
+                </div>
+            </div>
+        {% endfor %}
+            
+            <div class="clearfix"></div>
+            
+         
+    </ul>
+
+    {% endblock %}

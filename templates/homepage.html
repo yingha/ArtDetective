@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+    {% block content %} 
+    
+    <ul>
+        <div class="title">
+            <br>
+            <strong>ArtDetective</strong>
+            <br>
+            <br>
+            <img src="{{ url_for('static',filename='sherlock.jpg') }}" width="80" height="80" >
+            <br>
+            <br>
+            <h4>curious about which art style of your self-made paintings?<br>
+            oh, I like this artwork, which museum could I visit?</h4>
+          </div>
+
+        <a href="/classifier">
+            <button class ="begin">
+              <em> Let's GO </em>
+            </button>
+        </a>
+    </ul>
+
+    {% endblock %}

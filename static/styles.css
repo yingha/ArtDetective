@@ -1,0 +1,261 @@
+header{
+	padding: 3%;
+}
+
+nav{
+	text-align: right;
+	padding: auto;
+	position: relative;
+}
+
+nav a {
+	display: inline-block;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin: 8px;
+
+}
+
+nav a img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+.homeButton {
+	width:30px ;
+	left: 6%;
+}
+
+.homeButton:hover {
+    border: 2px solid black;
+}
+
+.burgerButton {
+	width: 25px;
+}
+
+.contactButton {
+	width:30px ;
+}
+
+body{
+	height: 100%;
+	background: white;
+	font-family: futura;
+	margin: 0;
+	padding: 0;
+}
+
+content{
+	background-color: transparent;
+	position: fixed;
+	left: 0;
+	bottom: 50;
+	width: 100%;
+	color: #6e6e6e;
+	text-align: center;
+	font-size: 100%;
+	padding: 1.2%;
+}
+
+.arttitle{
+	background-color: transparent;
+	position: fixed;
+	left: 0;
+	bottom: 50;
+	width: 100%;
+	color: #6e6e6e;
+	text-align: center;
+	font-size: 100%;
+	padding: 1.2%;
+}
+
+footer{
+	background-color:white;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: #6e6e6e;
+	text-align: center;
+	font-size: 100%;
+	padding: 1.2%;
+}
+
+/*  Horizonal tabs */
+
+nav div {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+  
+nav div li {
+    display: inline;
+}
+
+
+.title{
+	font-size:250%;
+}
+
+
+button{
+	background: #cfcfcf;
+	font-family: futura;
+	text-align: center;
+	border: none;
+	border-radius: 100px;
+	font-size: 20px;
+	margin: 100px;
+}
+
+button:hover{
+	background: #6e6e6e;
+}
+
+button a{
+	color: #303030;
+}
+
+button a:hover{
+	color: #303030;
+}
+
+.text{
+	font-size: 18px;
+	text-align: justify;
+	margin-right:20%;
+	margin-left: 20%;
+	padding-top: 1%;
+	margin-top: 0;
+	color: #303030;
+	/*height: 230px;*/
+
+}
+
+
+/*  User input img */
+img{
+	max-width:250px;
+}
+
+input[type=file]{
+	padding:10px;
+	background:#2d2d2d;
+}
+
+#dvPreview {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);
+    min-height: 400px;
+    min-width: 400px;
+    display: none;
+}
+
+/*  art style galerie */
+div.gallery {
+	border: 1px;
+}
+  
+div.gallery img:hover {
+	border: 3px solid #777;
+}
+
+div.gallery img {
+	width: 100%;
+	height: auto;
+}
+
+div.desc {
+	padding: 15px;
+	text-align: center;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.responsive {
+	padding: 0 6px;
+	float: left;
+	width: 24%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media only screen and (max-width: 700px) {
+	.responsive {
+		-ms-flex: 50%;
+    	flex: 50%;
+    	max-width: 50%;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.responsive {
+		-ms-flex: 100%;
+    	flex: 100%;
+    	max-width: 100%;
+		}
+}
+
+
+/*  art style galerie2 */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    margin: 0;
+	padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+ul {
+    line-height: 1.5;
+}
+
+.gallery2 {
+    display: flex;
+	flex-wrap: wrap;
+	padding: 5px;
+	justify-content: initial;
+}
+
+.gallery2:hover {
+	border: 1px solid #777;
+}
+
+.item {
+	margin: 5px;
+}
+
+@media only screen and (max-width: 700px) {
+	.gallery2 {
+		-moz-column-count: 5;
+		-webkit-column-count: 5;
+		column-count: 5;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.gallery2 {
+		-ms-flex: 100%;
+    	flex: 100%;
+    	max-width: 100%;
+		}
+}
+
+
+
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}

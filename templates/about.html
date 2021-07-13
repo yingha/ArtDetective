@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+    {% block content %} 
+    <ul>
+        <h3>About</h3>
+        <br>
+        <h4 style="color: black">User Instructions</h4>
+        <p class='text'>
+            ArtDetective is a web application, where you can upload the artwork you like or
+            self-made paintings to discover the art style. As bonus, you can also discover
+            the museums and galeries where you can blow your art mind :)
+        </p>  
+        <br>
+        
+        <h4 style="color: black">Data Resources</h4>
+        <p class='text'>
+            The original dataset was extracted by 
+            <a style="color:darkgray" href= 'https://arxiv.org/abs/1708.09533'> Tan, et al. (2018)</a>
+            , consisting painings from <a style="color:darkgray" href= 'https://www.wikiart.org/de'>WikiArt</a>. 
+            Here, I substrated 23514 images of four art styles - 
+            Expressionism, Impressionism, Cubism, and Pop Art - for image deep learning and classification.<br>
+            The art map is made based on the information from 
+            <a style="color:darkgray" href= 'http://www.artcyclopedia.com/'>artcyclopedia</a>.
+
+        </p>  
+        <br>
+
+        <h4 style="color: black">Web Development Resources</h4>
+        <p class='text'>
+            <a style="color:darkgray" href= 'https://github.com/CreativeCodingLab/ArtIDontLike'> ArtIDontLike </a> |
+            <a style="color:darkgray" href= 'https://www.w3schools.com/'> w3schools HTML/CSS </a> | 
+            <a style="color:darkgray" href= 'https://www.aspsnippets.com/Articles/Display-Image-after-selected-selecting-file-name-in-HTML-Input-FileUpload.aspx'>
+            Display the Uploaded File </a> | 
+            <a style="color:darkgray" href= 'https://www.javatpoint.com/flask-file-uploading'> Flask File Uploading</a></ul>
+        </p> 
+      
+    </ul>
+
+    {% endblock %}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtDetective</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}">
+    <link rel="shortcut icon" type="image/jpg" href="/static/inspiration.jpg"/>
+
+</head>
+
+<body>
+        <header>
+            <nav>
+              <a href="{{ url_for('homepage') }}">
+                <img class ="homeButton" src="/static/home.jpg"></a>
+          
+              <div id="tabs">
+                <li><a href="/about" style="color:darkgray">ABOUT</a></li>
+                <li><a href="/galerie" style="color:darkgray">GALERIE</a></li>
+                <li><a href="/contact" style="color:darkgray">CONTACT</a></li>
+              </div>
+
+            </nav>
+            <h1 class='arttitle'>Pop Art</h1>
+          </header>
+        
+        {% block content %} 
+        <h3> </h3>
+        {% endblock %}
+
+        {% extends 'pop_map.html' %}
