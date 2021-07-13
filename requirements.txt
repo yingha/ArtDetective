@@ -3,5 +3,6 @@ pandas
 jinja2
 numpy
 tensorflow
+gunicorn
 python-Levenshtein
 -e git+https://github.com/yingha/artclassifier.git#egg=artclassifier
