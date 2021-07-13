@@ -2,7 +2,7 @@ flask
 pandas
 jinja2
 numpy
-tensorflow
+tensorflow-cpu
 gunicorn
 python-Levenshtein
 -e git+https://github.com/yingha/artclassifier.git#egg=artclassifier
